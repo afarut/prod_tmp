@@ -133,3 +133,9 @@ AUTH_USER_MODEL = "core.CustomUser"
 # TELEGRAM_LOGIN_REDIRECT_URL = 'https://60cd-80-242-58-249.ngrok-free.app'
 
 TELEGRAM_BOT_TOKEN = '5774619465:AAFQygNF2huhMMLpqkSwqtqLKNUmcPtvDow'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+}
