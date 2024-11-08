@@ -49,20 +49,10 @@ class TelegramAuthView(APIView):
         responses={
             200: openapi.Response(
                 description="Успешная авторизация",
-                examples={
-                    "application/json": {
-                        "tokens": {
-                            "refresh": "твой_refresh_токен",
-                            "access": "твой_access_токен",
-                        }
-                    }
-                }
+
             ),
             400: openapi.Response(
                 description="Ошибка аутентификации",
-                examples={
-                    "application/json": {"detail": "Неверные данные Telegram"}
-                }
             )
         }
     )
